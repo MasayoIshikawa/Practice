@@ -1,0 +1,41 @@
+{include_php file="wp-load.php"}
+{php}
+get_header();
+{/php}
+	<main id="primary" class="site-main main">
+<!-- メインビジュアル -->
+<header class="title-vis">
+    <div class="title-vis-container"><h1 class="entry-title">ログイン</h1></div>
+</header>
+
+<div class="main-wrapper">
+    <!-- パンくず -->
+    <div id="breadcrumb"><ul><li><a href="https://com-douyukai.prage.jp"><span>ホーム</span></a></li><li><span>ログイン</span></li></ul></div>
+
+    <!-- ログインフォーム -->
+    <div class="login">
+        <form action="" class="login-form" method="post">
+            <p class="red">※30分操作をしない場合、再ログインが必要となります</p>
+            <dl>
+                <dt>ログインID</dt>
+                <dd><input type="text" name="username"></dd>
+                <dt>パスワード</dt>
+                <dd><input type="password" name="password"></dd>
+            </dl>
+            <div class="errmsg red">{$err}</div>
+            <button type="submit">ログイン</button>
+        </form>
+        <p>パスワードを忘れた方</p>
+        <div>
+            <a href="../form/reissuePass.php" target="_blank">パスワードを忘れた方</a>
+        </div>
+    </div>
+    <div class="join-link">
+        <p>お申込み</p>
+        <a href="">入会のご案内</a>
+    </div>
+</div>
+	</main><!-- #main -->
+{php}
+get_footer();
+{/php}
